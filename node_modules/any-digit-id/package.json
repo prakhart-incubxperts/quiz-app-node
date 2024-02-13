@@ -1,0 +1,25 @@
+{
+  "name": "any-digit-id",
+  "version": "1.0.0",
+  "description": "Generate any digit ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibnshayed/any-digit-id.git"
+  },
+  "keywords": [
+    "id",
+    "random id",
+    "random generate id",
+    "any digit id"
+  ],
+  "author": "Emran Ibn Shayed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibnshayed/any-digit-id/issues"
+  },
+  "homepage": "https://github.com/ibnshayed/any-digit-id#readme"
+}
