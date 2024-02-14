@@ -8,8 +8,8 @@ async function getOptionsByQuestionIdService(qid:any){
     arr=[];
    try {
     for(let i=0;i<qid.length;i++){
-        const res=await Options.findAll({
-            where:{QuestionId:qid[i]}
+        const res=await Options.findAll({attributes:{exclude:['CorrectOption','CreatedBy','CreatedAt','UpdatedBy','UpdatedAt']},
+            where:{QuestionId:Number(qid[i])}
         });
         arr.push(res[0]);         
     }
@@ -22,12 +22,28 @@ async function getOptionsByQuestionIdService(qid:any){
 
 async function getOptionByQuestionId(qid:number){
     try {
-        const res=await Options.findAll({attributes:['OptionId','Option1','Option2','Option3','Option4','CorrectOption','status','QuestionId']},
+        const res=await Options.findAll({attributes:['OptionId','Option1','Option2','Option3','Option4','status','QuestionId']},
         {
             where:{
                 QuestionId:qid
             }
         })
+         return res;
+    } catch (error) {
+        console.log("error:",error);
+        return response.status(400);
+    }  
+}
+
+async function getCorrectOptionService(id:number,value:number){
+    try {
+        const res=await Options.findOne({attributes:['OptionId','CorrectOption','QuestionId'],
+            where:{
+                QuestionId:id,
+            }
+        });
+        console.log("res:",res);
+        
          return res;
     } catch (error) {
         console.log("error:",error);
@@ -59,4 +75,4 @@ async function editOptionService(data:any){
     }   
 }
 
-export={saveOptionsService,getOptionsByQuestionIdService,getOptionByQuestionId,editOptionService}
+export={saveOptionsService,getOptionsByQuestionIdService,getOptionByQuestionId,editOptionService,getCorrectOptionService}

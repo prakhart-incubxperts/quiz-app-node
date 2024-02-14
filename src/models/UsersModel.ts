@@ -15,6 +15,7 @@ const sequelize = new Sequelize('testdb', 'root', 'root', {
     declare UserId:number;
     declare UserName:string;
     declare Email:string;
+    declare Password:string;
     declare CreatedBy:string;
     declare CreatedAt:Date;
     declare UpdatedBy:string;
@@ -34,6 +35,10 @@ module.exports= Users.init(
           allowNull: false,
         },
         Email: {
+            type: new DataTypes.STRING(128),
+            allowNull: false,
+          },
+          Password: {
             type: new DataTypes.STRING(128),
             allowNull: false,
           },

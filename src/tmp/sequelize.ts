@@ -4,6 +4,7 @@ const app=express();
 import cors from 'cors';
 import sql from 'mssql';
 import {config} from '../Connection/config';
+const Options = require('../models/optionModel.ts');
 app.use(cors());
 
   async function test(){
@@ -22,3 +23,13 @@ app.use(cors());
   }
 
   test();
+  option()
+  async function option(){
+    const user=await Options.findOne({
+        where:{
+            QuestionId:53,
+            CorrectOption:3
+        }
+    });
+    console.log("user:",user);
+}

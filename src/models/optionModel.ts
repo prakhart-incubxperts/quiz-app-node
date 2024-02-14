@@ -83,3 +83,13 @@ module.exports = Options.init(
         sequelize,
     },
 );
+
+async function option(){
+    const user=await Options.findOne({
+        where:{
+            QuestionId:53,
+            CorrectOption:1
+        }
+    });
+    console.log(user);
+}

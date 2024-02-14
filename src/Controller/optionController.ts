@@ -23,6 +23,16 @@ async function getSpecificOptionByQuestionIdController(data:any) {
     }
 }
 
+async function getCorrectOptionController(id:number,value:number) {
+    try {
+            const res = await optionServices.getCorrectOptionService(id,value)
+             return res;
+    } catch (error) {
+        console.log("error in fetch:", error);
+        return response.status(500);
+    }
+}
+
 async function saveOptionsDataController(data:any) {
     try {
         const response = await optionServices.saveOptionsService(data)
@@ -43,4 +53,4 @@ async function editOptionsController(data:any) {
     }
 }
 
-export={saveOptionsDataController,getOptionByQuestionIdController,getSpecificOptionByQuestionIdController,editOptionsController}
+export={saveOptionsDataController,getOptionByQuestionIdController,getSpecificOptionByQuestionIdController,editOptionsController,getCorrectOptionController}

@@ -26,6 +26,16 @@ routes.get('/options/qid', async (req: Request, res: Response) => {
     }
   });
 
+  routes.get('/option/correct', async (req: Request, res: Response) => {
+    try {
+        const ops= await optionController.getCorrectOptionController(Number(req?.query.id),Number(req?.query.value));
+        res.send(ops);
+    } catch (error) {
+      console.log("err from route:", error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+
 routes.post('/options/add', async (req: Request, res: Response) => {
     try {
       const response = await optionController.saveOptionsDataController(req.body);

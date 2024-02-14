@@ -22,7 +22,7 @@ import { Sequelize,Model,DataType, DataTypes } from 'sequelize';
     declare status:string;
     declare QuestionId:number;
     declare TopicId:number;
-    declare UserMail:string;
+    declare UserEmail:string;
   }
 
   module.exports= Tests.init(
@@ -48,10 +48,6 @@ import { Sequelize,Model,DataType, DataTypes } from 'sequelize';
             type: new DataTypes.INTEGER,
             allowNull: false,
           },
-        UserName: {
-          type: new DataTypes.STRING(128),
-          allowNull: false,
-        },
           CreatedBy: {
             type: new DataTypes.STRING(128),
             allowNull: false,
@@ -82,7 +78,7 @@ import { Sequelize,Model,DataType, DataTypes } from 'sequelize';
             type: new DataTypes.INTEGER,
             allowNull: false,
           },
-          UserMail: {
+          UserEmail: {
             type: new DataTypes.STRING(128),
             allowNull: false,
           },
