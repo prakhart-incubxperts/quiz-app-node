@@ -10,7 +10,7 @@ async function getUserService(data:any){
         console.log("data.UserName",data.UserName);
         
         const [user,created]=await users.findOrCreate({
-            where:{UserName:`${data.UserName}`,Email:`${data.UserEmail}`,CreatedBy:`${data.UserName}`,UpdatedBy:'', status:'Active'},
+            where:{UserName:`${data.UserName}`,Email:`${data.UserEmail}`,Password:`${data.Password}`,CreatedBy:`${data.UserName}`,UpdatedBy:'', status:'Active'},
           }) 
           return [user,created];
     } catch (error) {

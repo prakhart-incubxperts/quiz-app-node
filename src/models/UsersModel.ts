@@ -90,12 +90,12 @@ async function findUsers(){
     // }});
     // console.log(deletedUser);
   
-    const [user,created]=await Users.findOrCreate({
-      where:{UserName:'jon',Email:'jon@gmail.com',CreatedBy:'jon',UpdatedBy:'', status:'Active'},
-    })
-    console.log(created);
+    // const [user,created]=await Users.findOrCreate({
+    //   where:{UserName:'jon',Email:'jon@gmail.com',CreatedBy:'jon',UpdatedBy:'', status:'Active'},
+    // })
+    // console.log(created);
     
     
 }
-findUsers();
+// findUsers();
 
