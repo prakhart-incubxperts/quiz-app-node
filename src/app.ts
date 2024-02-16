@@ -42,7 +42,7 @@ app.use("/api",questionRoutes);
 app.use("/api",userRoutes);
 app.use("/api",optionRoutes);
 app.use("/api",testRoutes);
-let port = process.env.PORT || 5000;
+let port = 5000;
 
 app.listen(port,()=>{
     console.log("listening at port:5000");
