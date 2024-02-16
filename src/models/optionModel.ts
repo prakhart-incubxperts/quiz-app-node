@@ -1,13 +1,15 @@
 import { Sequelize, Model, DataTypes } from 'sequelize';
+import sequelize from '../Connection/sequelizeConnection.ts';
 
-const sequelize = new Sequelize('testdb', 'root', 'root', {
-    host: 'localhost',
-    dialect: 'mssql',
-    omitNull: true,
-    define: {
-        timestamps: false,
-    }
-});
+
+// const sequelize = new Sequelize('testdb', 'root', 'root', {
+//     host: 'localhost',
+//     dialect: 'mssql',
+//     omitNull: true,
+//     define: {
+//         timestamps: false,
+//     }
+// });
 
 class Options extends Model {
     declare OptionId: number;
