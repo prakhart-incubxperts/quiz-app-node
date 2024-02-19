@@ -1,7 +1,7 @@
 import express, { response } from 'express';
 const app = express();
 import { Op } from 'sequelize';
-const Topics = require('../models/topicModel.ts');
+const Topics = require('../models/topicModel');
 
 
 async function getTopicsService() {

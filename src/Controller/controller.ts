@@ -1,6 +1,6 @@
 import express, { response } from 'express';
 const app=express();
-import  topicServices from '../Services/topicServices.ts';
+import  topicServices from '../Services/topicServices';
 
     async function getTopicDataController() {
         try {
