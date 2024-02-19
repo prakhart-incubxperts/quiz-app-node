@@ -1,6 +1,6 @@
 import express from 'express';
 const app=express();
-import  questionServices from '../Services/questionServices.ts';
+import  questionServices from '../Services/questionServices';
 
 async function getQuestionDataController(tid:any) {
     try {

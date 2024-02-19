@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from 'express';
 const app=express();
 const routes: Router = express.Router();
 import cors from 'cors';
-import questionController from '../Controller/questionController.ts';
+import questionController from '../Controller/questionController';
 app.use(cors());
 
 routes.get('/question', async (req: Request, res: Response) => {

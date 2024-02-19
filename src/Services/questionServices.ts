@@ -1,6 +1,6 @@
 import { response } from 'express';
 import { Sequelize } from 'sequelize';
-const Questions = require('../models/questionModel.ts');
+const Questions = require('../models/questionModel');
 
 async function getQuestionsService(tid: any) {
     try {

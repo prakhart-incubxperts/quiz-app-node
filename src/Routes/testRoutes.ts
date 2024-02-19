@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from 'express';
 const app=express();
 const routes: Router = express.Router();
 import cors from 'cors';
-import testController from '../Controller/testController.ts'
+import testController from '../Controller/testController'
 //@ts-ignore
 import anyDigitId from 'any-digit-id';
 app.use(cors());

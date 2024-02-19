@@ -4,7 +4,7 @@ const app=express();
 import { QueryTypes, Sequelize } from 'sequelize';
 // import sequelize from 'models/testModel.ts';
 const Tests=require('../models/testModel');
-import sequelize from '../Connection/sequelizeConnection.ts';
+import sequelize from '../Connection/sequelizeConnection';
 
 
 async function saveTestsService(data:any,id:number){

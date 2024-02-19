@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from 'express';
 const app=express();
 const routes: Router = express.Router();
 import cors from 'cors';
-import optionController from '../Controller/optionController.ts';
+import optionController from '../Controller/optionController';
 app.use(cors());
 
 

@@ -1,6 +1,6 @@
 import express, { response } from 'express';
 const app=express();
-import  testServices from '../Services/testServices.ts';
+import  testServices from '../Services/testServices';
 
 async function getTestRankController(data:any) {
     try {

@@ -1,6 +1,6 @@
 import express, { response } from 'express';
 const app=express();
-import  optionServices from '../Services/optionServices.ts';
+import  optionServices from '../Services/optionServices';
 let array: any[] = [];
 
 async function getOptionByQuestionIdController(data:any) {

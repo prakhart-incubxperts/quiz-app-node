@@ -3,8 +3,8 @@ import { Sequelize } from 'sequelize';
 const app=express();
 import cors from 'cors';
 import sql from 'mssql';
-const Options = require('../models/optionModel.ts');
-import sequelize from '../Connection/sequelizeConnection.ts';
+const Options = require('../models/optionModel');
+import sequelize from '../Connection/sequelizeConnection';
 
 app.use(cors());
 

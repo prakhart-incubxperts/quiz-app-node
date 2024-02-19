@@ -1,6 +1,6 @@
 import express, { response } from 'express';
 const app=express();
-const Options = require('../models/optionModel.ts');
+const Options = require('../models/optionModel');
 let arr:any[]=[];
 
 async function getOptionsByQuestionIdService(qid:any){

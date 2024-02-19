@@ -1,6 +1,6 @@
 import express, { response } from 'express';
 const app=express();
-import  userServices from '../Services/userServices.ts';
+import  userServices from '../Services/userServices';
 
     async function getUserDataController(data:any) {
         try {
