@@ -7,7 +7,7 @@ import swaggerUi from "swagger-ui-express";
 const app=express();
 import cors from 'cors';
 // const cors = require("cors");
-import routes from './Routes/topics.ts'
+import routes from './Routes/topics'
 import questionRoutes from './Routes/questionRoutes.ts'
 import userRoutes from './Routes/userRoutes.ts';
 import optionRoutes from './Routes/optionRoutes.ts';
