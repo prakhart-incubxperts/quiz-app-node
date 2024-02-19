@@ -52,5 +52,5 @@ import  topicServices from '../Services/topicServices';
         }
     }
     
-    export = {getTopicDataController,saveTopicDataController,getTopicExistsController,getTopicNameExistsController,editTopicNameController};
+    export default  {getTopicDataController,saveTopicDataController,getTopicExistsController,getTopicNameExistsController,editTopicNameController};
 
