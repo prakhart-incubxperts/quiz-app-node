@@ -1,6 +1,5 @@
 import express, { response } from 'express';
 const app = express();
-import dbConnection from '../Connection/dbConnection.ts';
 import { Op } from 'sequelize';
 const Topics = require('../models/topicModel.ts');
 

@@ -1,12 +1,8 @@
 import express, {Express,Request,Response} from 'express';
-//const express = require('express')
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerJsDoc = require('swagger-jsdoc');
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 const app=express();
 import cors from 'cors';
-// const cors = require("cors");
 import routes from './Routes/topics'
 import questionRoutes from './Routes/questionRoutes'
 import userRoutes from './Routes/userRoutes';

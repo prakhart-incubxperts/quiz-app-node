@@ -1,5 +1,4 @@
 import { response } from 'express';
-import dbConnection from '../Connection/dbConnection.ts';
 import { Sequelize } from 'sequelize';
 const Questions = require('../models/questionModel.ts');
 

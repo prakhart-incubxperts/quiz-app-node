@@ -1,6 +1,5 @@
 import express, { response } from 'express';
 const app=express();
-import dbConnection from '../Connection/dbConnection.ts';
 // import sequelize from 'sequelize/types/sequelize';
 import { QueryTypes, Sequelize } from 'sequelize';
 // import sequelize from 'models/testModel.ts';

@@ -1,6 +1,5 @@
 import express, { response } from 'express';
 const app=express();
-import dbConnection from '../Connection/dbConnection.ts';
 const Options = require('../models/optionModel.ts');
 let arr:any[]=[];
 

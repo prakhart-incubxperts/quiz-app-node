@@ -2,7 +2,6 @@ import express, { response } from 'express';
 // import {Users} from '../tmp/UsersModel.ts';
 const users=require('../models/UsersModel');
 const app=express();
-import dbConnection from '../Connection/dbConnection.ts';
 
 
 async function getUserService(data:any){
@@ -21,8 +20,9 @@ async function getUserService(data:any){
 
 async function getUserByEmailService(data:any){
     try {
-        let query=`SELECT UserId FROM Users WHERE Email='${data}'`;
-    const res=await dbConnection(query);
+    const res= await users.findOne({
+        where:{Email:`${data}`}
+    })
     return res;
     } catch (error) {
         console.log("error:",error);
