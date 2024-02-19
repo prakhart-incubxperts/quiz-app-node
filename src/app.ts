@@ -8,11 +8,10 @@ const app=express();
 import cors from 'cors';
 // const cors = require("cors");
 import routes from './Routes/topics'
-import questionRoutes from './Routes/questionRoutes.ts'
-import userRoutes from './Routes/userRoutes.ts';
-import optionRoutes from './Routes/optionRoutes.ts';
-import testRoutes from './Routes/testRoutes.ts';
-//import {} from '../src/Routes/routes';
+import questionRoutes from './Routes/questionRoutes'
+import userRoutes from './Routes/userRoutes';
+import optionRoutes from './Routes/optionRoutes';
+import testRoutes from './Routes/testRoutes';
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(cors());
