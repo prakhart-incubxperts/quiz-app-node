@@ -74,4 +74,4 @@ async function editOptionService(data:any){
     }   
 }
 
-export={saveOptionsService,getOptionsByQuestionIdService,getOptionByQuestionId,editOptionService,getCorrectOptionService}
+export default {saveOptionsService,getOptionsByQuestionIdService,getOptionByQuestionId,editOptionService,getCorrectOptionService}

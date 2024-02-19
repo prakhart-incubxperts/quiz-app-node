@@ -40,4 +40,4 @@ async function getTestAttemptController(data:number[]) {
     }
 }
 
-export={saveTestDataController,getTestRankController,getTestAttemptController}
+export default {saveTestDataController,getTestRankController,getTestAttemptController}

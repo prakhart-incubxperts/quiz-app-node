@@ -32,4 +32,4 @@ async function getUserByEmailService(data:any){
 
 
 
-export={getUserService,getUserByEmailService}
+export default {getUserService,getUserByEmailService}

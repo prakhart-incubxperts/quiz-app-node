@@ -25,4 +25,4 @@ import  userServices from '../Services/userServices';
 
     
 
-    export={getUserDataController,getUserByEmailDataController}
+    export default {getUserDataController,getUserByEmailDataController}

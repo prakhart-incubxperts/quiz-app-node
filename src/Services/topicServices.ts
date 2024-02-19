@@ -77,4 +77,4 @@ async function saveTopicsService(data: any) {
     }
 }
 
-export = { getTopicsService, saveTopicsService, getTopicExistsService, getTopicNameExistsService, editTopicService }
+export default { getTopicsService, saveTopicsService, getTopicExistsService, getTopicNameExistsService, editTopicService }

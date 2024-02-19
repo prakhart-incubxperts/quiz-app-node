@@ -53,4 +53,4 @@ async function editOptionsController(data:any) {
     }
 }
 
-export={saveOptionsDataController,getOptionByQuestionIdController,getSpecificOptionByQuestionIdController,editOptionsController,getCorrectOptionController}
+export default {saveOptionsDataController,getOptionByQuestionIdController,getSpecificOptionByQuestionIdController,editOptionsController,getCorrectOptionController}

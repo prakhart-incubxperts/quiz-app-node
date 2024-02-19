@@ -44,4 +44,4 @@ async function testAttemptService(tid:any){
     }
 }
 
-export = {saveTestsService,TestRankService,testAttemptService}
+export default {saveTestsService,TestRankService,testAttemptService}

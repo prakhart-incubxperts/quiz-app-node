@@ -69,6 +69,6 @@ async function editQuestionController(data:any) {
     }
 }
 
-export={getQuestionDataController,saveQuestionDataController,getQuestionDataByDescriptionController,getAllQuestionByTopicIdController,deleteQuestionController,getQuestionByIdController,editQuestionController}
+export default {getQuestionDataController,saveQuestionDataController,getQuestionDataByDescriptionController,getAllQuestionByTopicIdController,deleteQuestionController,getQuestionByIdController,editQuestionController}
 
 

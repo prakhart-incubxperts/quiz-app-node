@@ -110,4 +110,4 @@ async function editQuestionService(data: any) {
     }
 }
 
-export = { getQuestionsService, saveQuestionsService, getQuestionsByDescriptionService, getAllQuestionsByTopicIdService, deleteQuestionService, getQuestionsByIdService, editQuestionService }
+export default { getQuestionsService, saveQuestionsService, getQuestionsByDescriptionService, getAllQuestionsByTopicIdService, deleteQuestionService, getQuestionsByIdService, editQuestionService }
