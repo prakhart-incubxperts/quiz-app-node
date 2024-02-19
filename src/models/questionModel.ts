@@ -1,5 +1,5 @@
 import { Sequelize,Model,DataType, DataTypes } from 'sequelize';
-import sequelize from '../Connection/sequelizeConnection.ts';
+import sequelize from '../Connection/sequelizeConnection';
 
 
 // const sequelize = new Sequelize('testdb', 'root', 'root', {
