@@ -6,6 +6,7 @@ const Topics = require('../models/topicModel');
 
 async function getTopicsService() {
     try {
+        console.log("inside get topics serv");
         const res = await Topics.findAll({
             attributes: ['TopicId', 'TopicName', 'status']
         });

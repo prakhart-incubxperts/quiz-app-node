@@ -23,6 +23,7 @@ app.use(cors());
 
 routes.get('/topics', async (req: Request, res: Response) => {
     try {
+      console.log("inside get topics");
       const topic = await Controller.getTopicDataController();
       res.send(topic);
     } catch (error) {

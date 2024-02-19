@@ -4,6 +4,7 @@ import  topicServices from '../Services/topicServices';
 
     async function getTopicDataController() {
         try {
+            console.log("inside get topics cont");
             const data = await topicServices.getTopicsService();
             return data
         } catch (error) {
