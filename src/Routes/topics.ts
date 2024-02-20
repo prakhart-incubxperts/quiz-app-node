@@ -19,6 +19,7 @@ app.use(cors());
  *               message: 'OK!'
  *          
  */
+console.log("inside backend topics");
 
 
 routes.get('/topics', async (req: Request, res: Response) => {
