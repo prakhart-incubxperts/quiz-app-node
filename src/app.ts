@@ -9,7 +9,7 @@ import userRoutes from './Routes/userRoutes';
 import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
 const corsOption = {
-  origin: ['http://localhost:8000'],
+  origin: ['http://http://43.205.240.85:8000'],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 }
