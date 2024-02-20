@@ -3,7 +3,7 @@ import { Sequelize } from 'sequelize';
 const app=express();
 import cors from 'cors';
 import sql from 'mssql';
-const Options = require('../models/optionModel');
+const Topics = require('../models/topicModel');
 import sequelize from '../Connection/sequelizeConnection';
 
 app.use(cors());
@@ -24,13 +24,8 @@ app.use(cors());
   }
 
   test();
-//   option()
-//   async function option(){
-//     const user=await Options.findOne({
-//         where:{
-//             QuestionId:53,
-//             CorrectOption:3
-//         }
-//     });
-//     console.log("user:",user);
-// }
+  option()
+  async function option(){
+    const user=await Topics.findAll();
+    console.log("user:",user);
+}
