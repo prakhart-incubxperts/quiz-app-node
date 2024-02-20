@@ -8,9 +8,14 @@ import questionRoutes from './Routes/questionRoutes'
 import userRoutes from './Routes/userRoutes';
 import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
+const corsOption = {
+  origin: ['http://localhost:3000'],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOption));
 
 const swaggerOptions = {
     definition: {
