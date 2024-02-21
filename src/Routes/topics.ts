@@ -23,6 +23,8 @@ console.log("inside backend topics");
 
 
 routes.get('/topics', async (req: Request, res: Response) => {
+  console.log("inside get topic routes");
+  
     try {
       console.log("inside get topics");
       const topic = await Controller.getTopicDataController();
