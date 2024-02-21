@@ -1,21 +1,22 @@
 import express, {Express,Request,Response} from 'express';
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-const app=express();
 import cors from 'cors';
 import routes from './Routes/topics'
 import questionRoutes from './Routes/questionRoutes'
 import userRoutes from './Routes/userRoutes';
 import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
+const app=express();
+const allowedOrigin=['http://13.233.106.78:8000/api','http://172.31.37.40:8000/api']
 const corsOption = {
-  origin: ['http://13.233.106.78:8000/api'],
+  origin: allowedOrigin,
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 }
+app.use(cors(corsOption));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-app.use(cors(corsOption));
 
 const swaggerOptions = {
     definition: {
