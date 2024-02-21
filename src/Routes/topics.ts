@@ -3,6 +3,7 @@ const app=express();
 const routes: Router = express.Router();
 // import cors from 'cors';
 import Controller from '../Controller/controller'
+import cors from 'cors';
 // app.use(cors());
 
 /**
@@ -22,7 +23,7 @@ import Controller from '../Controller/controller'
 console.log("inside backend topics");
 
 
-routes.get('/topics', async (req: Request, res: Response) => {
+routes.get('/topics', cors(),async (req: Request, res: Response) => {
   console.log("inside get topic routes");
   
     try {
