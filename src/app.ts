@@ -2,7 +2,7 @@ import express, {Express,Request,Response} from 'express';
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import cors from 'cors';
-import routes from '../src/Routes/topics'
+import routes from '../src/Routes/topics.ts'
 import questionRoutes from './Routes/questionRoutes'
 import userRoutes from './Routes/userRoutes';
 import optionRoutes from './Routes/optionRoutes';
