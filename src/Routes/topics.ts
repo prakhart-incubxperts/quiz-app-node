@@ -1,9 +1,9 @@
 import express, { Router, Request, Response } from 'express';
 const app=express();
 const routes: Router = express.Router();
-import cors from 'cors';
+// import cors from 'cors';
 import Controller from '../Controller/controller'
-app.use(cors());
+// app.use(cors());
 
 /**
  * @swagger
