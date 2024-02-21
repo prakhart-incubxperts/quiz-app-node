@@ -29,7 +29,7 @@ const swaggerOptions = {
       },
       servers: [
         {
-          url: 'http://13.233.106.78:5000/api',
+          url: 'http://13.233.106.78:5000/',
         },
       ],
     },
@@ -39,11 +39,11 @@ const swaggerOptions = {
   const swaggerDocs = swaggerJSDoc(swaggerOptions);
   console.log(swaggerDocs);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-app.use('/',routes);
-app.use("/",questionRoutes);
-app.use("/",userRoutes);
-app.use("/",optionRoutes);
-app.use("/",testRoutes);
+app.use('/api',routes);
+app.use("/api",questionRoutes);
+app.use("/api",userRoutes);
+app.use("/api",optionRoutes);
+app.use("/api",testRoutes);
 let port = 5000;
 
 app.listen(port,()=>{
