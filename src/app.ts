@@ -9,7 +9,7 @@ import userRoutes from './Routes/userRoutes';
 import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
 const corsOption = {
-  origin: ['http://43.205.240.85:8000/api'],
+  origin: ['http://13.233.106.78:8000/api'],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 }
@@ -27,7 +27,7 @@ const swaggerOptions = {
       },
       servers: [
         {
-          url: 'http://43.205.240.85:5000/api',
+          url: 'http://13.233.106.78:5000/api',
         },
       ],
     },
