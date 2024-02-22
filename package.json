@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "ts-node src/app.ts",
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "copyfiles -u 1 src/**/*.json dist/",
     "dev:ts": "nodemon app.js",
     "swagger-autogen": "node ./docs/swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
