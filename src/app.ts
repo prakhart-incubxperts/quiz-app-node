@@ -29,7 +29,7 @@ const swaggerOptions = {
       },
       servers: [
         {
-          url: 'http://3.109.217.173:5000/',
+          url: 'http://3.109.217.173:5000/api',
         },
       ],
     },
