@@ -9,7 +9,7 @@ import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
 
 const app=express();
-const allowedOrigin=['http://13.233.106.78:8000/','http://172.31.37.40:8000/']
+const allowedOrigin=['http://3.109.217.173:8000/','http://172.31.37.40:8000/']
 const corsOption = {
   origin: allowedOrigin,
   credentials: true,
@@ -29,7 +29,7 @@ const swaggerOptions = {
       },
       servers: [
         {
-          url: 'http://13.233.106.78:5000/',
+          url: 'http://3.109.217.173:5000/',
         },
       ],
     },
