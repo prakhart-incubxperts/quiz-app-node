@@ -39,6 +39,9 @@ const swaggerOptions = {
   const swaggerDocs = swaggerJSDoc(swaggerOptions);
   console.log(swaggerDocs);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/',(req,res)=>{
+  res.send("node server api is hitting")
+});
 app.use('/api',routes);
 app.use("/api",questionRoutes);
 app.use("/api",userRoutes);
