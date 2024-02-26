@@ -1,7 +1,7 @@
 import express, {Express,Request,Response} from 'express';
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import cors from 'cors';
+import cors, { CorsOptions } from 'cors';
 import routes from './Routes/topics'
 import questionRoutes from './Routes/questionRoutes'
 import userRoutes from './Routes/userRoutes';
@@ -10,12 +10,13 @@ import testRoutes from './Routes/testRoutes';
 
 const app=express();
 const allowedOrigin=['http://13.234.119.112:8000/api','http://172.31.37.40:8000/api']
-const corsOption = {
+const corsOptions: CorsOptions = {
   origin: allowedOrigin,
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-}
-app.use(cors(corsOption));
+  allowedHeaders:('Access-Control-Allow-Origin:*'),
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+};
+app.use(cors(corsOptions));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
