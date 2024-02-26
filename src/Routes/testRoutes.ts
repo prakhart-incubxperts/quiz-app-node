@@ -37,7 +37,7 @@ routes.post('/test/add', async (req: Request, res: Response) => {
     try {
       console.log("req from /test/attempt",req);
       
-      if(Number(req?.query.tid)){
+      if(Number(req?.query.tid)>1){
         const arr:number[]=Object.values(Number(req?.query.tid)).map(value=>Number(value));
         const ques = await testController.getTestAttemptController(arr);
         res.send(ques);
