@@ -30,7 +30,7 @@ async function TestRankService(data:number){
 }
 
 async function testAttemptService(tid:any){
-    let arr:any[]=[];
+    const arr:any[]=[];
     try {
     for(let i=0;i<tid?.length;i++){
         const res=await sequelize.query(`SELECT COUNT(*) AS Attempts FROM (SELECT COUNT(*) AS Attempts FROM Tests WHERE (TopicId=${Number(tid[i])}) GROUP BY TestId) AS Attempts;`,{ type: QueryTypes.SELECT });

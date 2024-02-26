@@ -1,7 +1,7 @@
 import express, { response } from 'express';
 const app=express();
 import  optionServices from '../Services/optionServices';
-let array: any[] = [];
+const array: any[] = [];
 
 async function getOptionByQuestionIdController(data:any) {
     try {

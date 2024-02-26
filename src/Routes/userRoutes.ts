@@ -1,6 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 const app=express();
-const routes: Router = express.Router();
+const routes:Router = express.Router();
 import cors from 'cors';
 import UserController from '../Controller/userController'
 app.use(cors());

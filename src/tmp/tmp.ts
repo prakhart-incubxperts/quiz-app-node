@@ -6,7 +6,7 @@ import {config} from '../Connection/config';
 app.use(cors());
 
 
-let query="SELECT * from Topics";
+const query="SELECT * from Topics";
 
 async function fetch(){
     sql.connect(config, async (err) => {

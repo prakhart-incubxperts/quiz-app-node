@@ -1,6 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 const app=express();
-const routes: Router = express.Router();
+const routes:Router= express.Router();
 import cors from 'cors';
 import testController from '../Controller/testController'
 //@ts-ignore
@@ -22,7 +22,7 @@ routes.post('/test/add', async (req: Request, res: Response) => {
     
     const id = anyDigitId({digit:5, type: 'numbers'});
     try {
-      let data=req.body.params;
+      const data=req.body.params;
         for(let i=0;i<data?.length;i++){
           const response = await testController.saveTestDataController(data[i],id);
         }

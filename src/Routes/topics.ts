@@ -1,6 +1,6 @@
 import express, { Router, Request, Response } from 'express';
 const app=express();
-const routes: Router = express.Router();
+const routes:Router = express.Router();
 // import cors from 'cors';
 import Controller from '../Controller/controller'
 import cors from 'cors';
@@ -47,7 +47,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
 
   routes.get('/topics/getname', async (req: Request, res: Response) => {
     try {
-      const topic = await Controller.getTopicNameExistsController(req.query.topic,req.query.topicId);
+      const topic = await Controller.getTopicNameExistsController(req.query.topic,Number(req.query.topicId));
       res.send(topic);
     } catch (error) {
       console.log("err from route:", error);

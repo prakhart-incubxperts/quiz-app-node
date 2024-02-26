@@ -23,7 +23,7 @@ import  topicServices from '../Services/topicServices';
         }
     }
 
-    async function getTopicNameExistsController(topic:any,id:any) {
+    async function getTopicNameExistsController(topic:any,id:number) {
         try {
             const response = await topicServices.getTopicNameExistsService(topic,id);
             return response;
@@ -33,7 +33,7 @@ import  topicServices from '../Services/topicServices';
         }
     }
 
-    async function editTopicNameController(topic:any,id:any) {
+    async function editTopicNameController(topic:any,id:number) {
         try {
             const response = await topicServices.editTopicService(topic,id);
             return response;

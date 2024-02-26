@@ -68,7 +68,7 @@ async function editTopicService(topic: string, id: number) {
 }
 
 async function saveTopicsService(data: any) {
-    let datetime = new Date();
+    const datetime = new Date();
     try {
         const res=Topics.create({TopicName:`${data.TopicName}`,CreatedBy:`${data.CreatedBy}`,UpdatedBy:`${data.UpdatedBy}`,status:`${data.status}`});
         return res;
