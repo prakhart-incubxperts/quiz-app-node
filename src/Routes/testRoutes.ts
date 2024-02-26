@@ -39,8 +39,10 @@ routes.post('/test/add', async (req: Request, res: Response) => {
       
       if(Number(req?.query.tid)>1){
         const arr:number[]=Object.values(Number(req?.query.tid)).map(value=>Number(value));
-        const ques = await testController.getTestAttemptController(arr);
-        res.send(ques);
+        const tests = await testController.getTestAttemptController(arr);
+        console.log("tests:",tests);
+        
+        res.send(tests);
       }
       else{
         res.send({msg:"No data found in request body"})
