@@ -37,7 +37,12 @@ async function testAttemptService(tid:any){
         arr.push(res[0]);
     }
     console.log("arr:",arr);
-    return arr;   
+    if(arr.length>1){
+        return arr;   
+    }
+    else {
+        return 0;
+    }
     } catch (error) {
         console.log("error:",error);
         return response.status(400);
