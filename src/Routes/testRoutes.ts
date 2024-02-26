@@ -35,7 +35,7 @@ routes.post('/test/add', async (req: Request, res: Response) => {
 
   routes.get('/test/attempt', async (req: Request, res: Response) => {
     try {
-      console.log("req from /test/attempt",req);
+      console.log("req from /test/attempt",req?.query);
       
       if(Number(req?.query.tid)>1){
         const arr:number[]=Object.values(Number(req?.query.tid)).map(value=>Number(value));
