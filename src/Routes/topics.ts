@@ -2,7 +2,8 @@ import express, { Router, Request, Response } from 'express';
 const app=express();
 const routes:Router = express.Router();
 // import cors from 'cors';
-import Controller from '../Controller/controller'
+import Controller from '../Controller/controller';
+import {corsOptions} from '../app'
 import cors from 'cors';
 // app.use(cors());
 
@@ -55,7 +56,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  routes.put('/topics/edit',cors(), async (req: Request, res: Response) => {
+  routes.put('/topics/edit',cors(corsOptions), async (req: Request, res: Response) => {
     try {
       console.log("re.query:",req.body.params);
       const topic = await Controller.editTopicNameController(req.body.params.topic,req.body.params.topicId);
@@ -66,7 +67,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  routes.post('/topics/add',cors(), async (req: Request, res: Response) => {
+  routes.post('/topics/add',cors(corsOptions), async (req: Request, res: Response) => {
     try {
       const response = await Controller.saveTopicDataController(req.body);
       res.send({msg:"Topic added successfully"});
