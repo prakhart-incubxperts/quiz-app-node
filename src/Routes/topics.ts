@@ -35,7 +35,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/topics/get', async (req: Request, res: Response) => {
+  routes.get('/topics/get',cors(), async (req: Request, res: Response) => {
     try {
       const topic = await Controller.getTopicExistsController(String(req?.query.topic));
       res.send(topic);
@@ -45,7 +45,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/topics/getname', async (req: Request, res: Response) => {
+  routes.get('/topics/getname',cors(), async (req: Request, res: Response) => {
     try {
       const topic = await Controller.getTopicNameExistsController(req.query.topic,Number(req.query.topicId));
       res.send(topic);
@@ -55,7 +55,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  routes.put('/topics/edit', async (req: Request, res: Response) => {
+  routes.put('/topics/edit',cors(), async (req: Request, res: Response) => {
     try {
       console.log("re.query:",req.body.params);
       const topic = await Controller.editTopicNameController(req.body.params.topic,req.body.params.topicId);
@@ -66,7 +66,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  routes.post('/topics/add', async (req: Request, res: Response) => {
+  routes.post('/topics/add',cors(), async (req: Request, res: Response) => {
     try {
       const response = await Controller.saveTopicDataController(req.body);
       res.send({msg:"Topic added successfully"});

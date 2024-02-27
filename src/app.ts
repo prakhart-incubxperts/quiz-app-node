@@ -9,7 +9,7 @@ import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
 
 const app=express();
-const allowedOrigin=['*']
+const allowedOrigin=['http://13.232.154.99:8000/api','http://172.31.37.40:8000/api','*','null']
 const corsOptions: CorsOptions = {
   origin: allowedOrigin,
   credentials: true,
