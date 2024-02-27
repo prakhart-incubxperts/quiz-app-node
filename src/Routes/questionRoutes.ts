@@ -5,7 +5,7 @@ import cors from 'cors';
 import questionController from '../Controller/questionController';
 app.use(cors());
 
-routes.get('/question', async (req: Request, res: Response) => {
+routes.get('/question',cors(), async (req: Request, res: Response) => {
     try {
       const ques = await questionController.getQuestionDataByDescriptionController(req.query);
       res.send(ques);
@@ -15,7 +15,7 @@ routes.get('/question', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/questions', async (req: Request, res: Response) => {
+  routes.get('/questions',cors(), async (req: Request, res: Response) => {
     try {
       const ques = await questionController.getQuestionDataController(req.query.tid);
       res.send(ques);
@@ -25,7 +25,7 @@ routes.get('/question', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/questions/tid', async (req: Request, res: Response) => {
+  routes.get('/questions/tid',cors(), async (req: Request, res: Response) => {
     try {
       const ques = await questionController.getAllQuestionByTopicIdController(req.query.tid);
       res.send(ques);
@@ -35,7 +35,7 @@ routes.get('/question', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/question/qid', async (req: Request, res: Response) => {
+  routes.get('/question/qid',cors(), async (req: Request, res: Response) => {
     try {
       const ques = await questionController.getQuestionByIdController(req.query.qid);
       res.send(ques);
@@ -45,7 +45,7 @@ routes.get('/question', async (req: Request, res: Response) => {
     }
   });
 
-  routes.post('/questions/add', async (req: Request, res: Response) => {
+  routes.post('/questions/add',cors(), async (req: Request, res: Response) => {
     try {
       const response = await questionController.saveQuestionDataController(req.body);
       res.send({msg:"success",response});
@@ -55,7 +55,7 @@ routes.get('/question', async (req: Request, res: Response) => {
     }
   });
 
-  routes.put('/question/delete', async (req: Request, res: Response) => {
+  routes.put('/question/delete',cors(), async (req: Request, res: Response) => {
     try {
       const response = await questionController.deleteQuestionController(req.body.qid);
       res.send({msg:"Question added successfully"});
@@ -65,7 +65,7 @@ routes.get('/question', async (req: Request, res: Response) => {
     }
   });
 
-  routes.put('/question/edit', async (req: Request, res: Response) => {
+  routes.put('/question/edit',cors(), async (req: Request, res: Response) => {
     try {
       const response = await questionController.editQuestionController(req.body);
       res.send({msg:"Question added successfully"});

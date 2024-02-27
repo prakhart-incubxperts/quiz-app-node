@@ -6,7 +6,7 @@ import optionController from '../Controller/optionController';
 app.use(cors());
 
 
-routes.get('/options/qid', async (req: Request, res: Response) => {
+routes.get('/options/qid',cors(), async (req: Request, res: Response) => {
     try {
         const ops= await optionController.getOptionByQuestionIdController(req.query.tid);
         res.send(ops);
@@ -16,7 +16,7 @@ routes.get('/options/qid', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/option/qid', async (req: Request, res: Response) => {
+  routes.get('/option/qid',cors(), async (req: Request, res: Response) => {
     try {
         const ops= await optionController.getSpecificOptionByQuestionIdController(req.query.tid);
         res.send(ops);
@@ -26,7 +26,7 @@ routes.get('/options/qid', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/option/correct', async (req: Request, res: Response) => {
+  routes.get('/option/correct',cors(), async (req: Request, res: Response) => {
     try {
         const ops= await optionController.getCorrectOptionController(Number(req?.query.id),Number(req?.query.value));
         res.send(ops);
@@ -36,7 +36,7 @@ routes.get('/options/qid', async (req: Request, res: Response) => {
     }
   });
 
-routes.post('/options/add', async (req: Request, res: Response) => {
+routes.post('/options/add',cors(), async (req: Request, res: Response) => {
     try {
       const response = await optionController.saveOptionsDataController(req.body);
       res.send({msg:"Question added successfully"});
@@ -46,7 +46,7 @@ routes.post('/options/add', async (req: Request, res: Response) => {
     }
   });
 
-  routes.put('/option/edit', async (req: Request, res: Response) => {
+  routes.put('/option/edit',cors(), async (req: Request, res: Response) => {
     try {
       const response = await optionController.editOptionsController(req.body);
       res.send({msg:"Option edited successfully"});

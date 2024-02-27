@@ -21,7 +21,7 @@ app.use(cors());
  */
 
 
-routes.get('/users', async (req: Request, res: Response) => {
+routes.get('/users',cors(), async (req: Request, res: Response) => {
     try {
       const users = await UserController.getUserDataController(req.query);
       res.send(users);
@@ -31,7 +31,7 @@ routes.get('/users', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/users/get', async (req: Request, res: Response) => {
+  routes.get('/users/get',cors(), async (req: Request, res: Response) => {
     try {
       const users = await UserController.getUserByEmailDataController(req.query.email);
       res.send(users);
