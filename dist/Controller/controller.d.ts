@@ -1,5 +1,5 @@
 declare function getTopicDataController(): Promise<any>;
-declare function getTopicExistsController(data: any): Promise<any>;
+declare function getTopicExistsController(data: string): Promise<any>;
 declare function getTopicNameExistsController(topic: any, id: number): Promise<any>;
 declare function editTopicNameController(topic: any, id: number): Promise<any>;
 declare function saveTopicDataController(data: any): Promise<any>;

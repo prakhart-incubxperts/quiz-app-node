@@ -37,7 +37,7 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
 
   routes.get('/topics/get', async (req: Request, res: Response) => {
     try {
-      const topic = await Controller.getTopicExistsController(req?.query.topic);
+      const topic = await Controller.getTopicExistsController(String(req?.query.topic));
       res.send(topic);
     } catch (error) {
       console.log("err from route:", error);

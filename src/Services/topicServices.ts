@@ -17,7 +17,7 @@ async function getTopicsService() {
     }
 }
 
-async function getTopicExistsService(data: any) {
+async function getTopicExistsService(data: string) {
     try {
         const res = await Topics.findAll({
             attributes: ['TopicId'],

@@ -13,7 +13,7 @@ import  topicServices from '../Services/topicServices';
         }
     }
 
-    async function getTopicExistsController(data:any) {
+    async function getTopicExistsController(data:string) {
         try {
             const response = await topicServices.getTopicExistsService(data);
             return response;
