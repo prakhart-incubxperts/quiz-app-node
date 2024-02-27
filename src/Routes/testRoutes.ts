@@ -5,9 +5,9 @@ import cors from 'cors';
 import testController from '../Controller/testController'
 //@ts-ignore
 import anyDigitId from 'any-digit-id';
-app.use(cors());
+//app.use(cors());
 
-routes.get('/test/rank', async (req: Request, res: Response) => {
+routes.get('/test/rank',cors(), async (req: Request, res: Response) => {
   try {
     const ques = await testController.getTestRankController(req.query.tid);
     res.send(ques);
@@ -17,7 +17,7 @@ routes.get('/test/rank', async (req: Request, res: Response) => {
   }
 });
 
-routes.post('/test/add', async (req: Request, res: Response) => {
+routes.post('/test/add',cors(), async (req: Request, res: Response) => {
     console.log("test data:",req.body.params);
     
     const id = anyDigitId({digit:5, type: 'numbers'});
@@ -33,7 +33,7 @@ routes.post('/test/add', async (req: Request, res: Response) => {
     }
   });
 
-  routes.get('/test/attempt', async (req: Request, res: Response) => {
+  routes.get('/test/attempt',cors(), async (req: Request, res: Response) => {
     try {
       console.log("req from /test/attempt",req?.query);
       
