@@ -13,7 +13,7 @@ const allowedOrigin=['http://13.232.154.99:8000/api','http://172.31.37.40:8000/a
 export const corsOptions: CorsOptions = {
   origin: '*',
   credentials: true,
-  allowedHeaders:['Access-Control-Allow-Origin:*','Access-Control-Allow-Headers:Content-Type','Access-Control-Allow-Methods: GET, POST, PUT, DELETE'],
+  allowedHeaders:'*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 };
 app.use(cors(corsOptions));
