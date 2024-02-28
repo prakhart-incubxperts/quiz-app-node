@@ -50,7 +50,7 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
       const users = await UserController.getUserController(req?.body);
       jwt.sign((req?.query),secretKey,{expiresIn:'300s'},(err:Error,token:any)=>{
         res.json({
-          token
+          token,users
         })
       })
       // res.send(users);
