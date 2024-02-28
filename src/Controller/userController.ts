@@ -23,6 +23,15 @@ import  userServices from '../Services/userServices';
         }
     }
 
-    
+    async function getUserController(data:any) {
+        try {
+            const response = await userServices.getUserAuthService(data)
+            console.log("inside getusers after fetch data:", response);
+            return response
+        } catch (error) {
+            console.log("error in fetch:", error);
+            return response.status(400);
+        }
+    }
 
-    export default {getUserDataController,getUserByEmailDataController}
+    export default {getUserDataController,getUserByEmailDataController,getUserController}

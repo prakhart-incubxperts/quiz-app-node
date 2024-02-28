@@ -30,6 +30,17 @@ async function getUserByEmailService(data:any){
     }  
 }
 
+async function getUserAuthService(data:any){
+    try {
+    const res= await users.findOne({
+        where:{Email:`${data?.UserEmail}`,Password:`${data?.Password}`}
+    })
+    return res;
+    } catch (error) {
+        console.log("error:",error);
+        return response.status(400);
+    }  
+}
 
 
-export default {getUserService,getUserByEmailService}
+export default {getUserService,getUserByEmailService,getUserAuthService}

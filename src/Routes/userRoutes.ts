@@ -26,11 +26,6 @@ app.use(cors());
 routes.get('/users',cors(), async (req: Request, res: Response) => {
     try {
       const users = await UserController.getUserDataController(req.query);
-      jwt.sign((req?.query),secretKey,{expiresIn:'300s'},(err:Error,token:any)=>{
-        res.json({
-          token
-        })
-      })
       res.send(users);
     } catch (error) {
       console.log("err from route:", error);
@@ -51,7 +46,13 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
 
   routes.post('/users/login',cors(), async (req: Request, res: Response) => {
     try {
-      const users = await UserController.getUserByEmailDataController(req.query.email);
+      console.log("req.body:",req?.body);
+      const users = await UserController.getUserController(req?.body);
+      jwt.sign((req?.query),secretKey,{expiresIn:'300s'},(err:Error,token:any)=>{
+        res.json({
+          token
+        })
+      })
       res.send(users);
     } catch (error) {
       console.log("err from route:", error);
