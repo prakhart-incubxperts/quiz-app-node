@@ -53,7 +53,7 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
           token
         })
       })
-      res.send(users);
+      // res.send(users);
     } catch (error) {
       console.log("err from route:", error);
       res.status(500).send('Internal Server Error');
