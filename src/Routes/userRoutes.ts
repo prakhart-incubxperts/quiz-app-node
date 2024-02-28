@@ -1,4 +1,4 @@
-import express, { Router, Request, Response } from 'express';
+import express, { Router, Request, Response, NextFunction } from 'express';
 const app=express();
 const routes:Router = express.Router();
 import cors from 'cors';
@@ -59,6 +59,27 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
       res.status(500).send('Internal Server Error');
     }
   });
+
+  routes.post('/users/account',verifyToken,cors(), async (req: Request, res: Response) => {
+    try {
+      console.log("req.body:",req?.body);
+      // const users = await UserController.getUserController(req?.body);
+      // res.send(users);
+    } catch (error) {
+      console.log("err from route:", error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+
+  function verifyToken(req:Request,res:Response,next:NextFunction){
+    const bearerHeader=req.headers['Authorization'];
+    if(typeof bearerHeader!== 'undefined'){
+      
+    }
+    else{
+      res.send({result:'Token is invalid'})
+    }
+  }
 
   
   export default routes;
