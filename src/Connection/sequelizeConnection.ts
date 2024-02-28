@@ -16,4 +16,9 @@ const sequelize = new Sequelize('testdb', 'root', 'rootmaster', {
     },
   });
 
+// const sequelize = new Sequelize('testdb', 'root', 'root', {
+//   host: 'localhost',
+//   dialect:'mssql'
+// });
+
   export default sequelize;

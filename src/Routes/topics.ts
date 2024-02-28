@@ -24,7 +24,7 @@ import cors from 'cors';
 console.log("inside backend topics");
 
 
-routes.get('/topics', cors(),async (req: Request, res: Response) => {
+routes.get('/topics',async (req: Request, res: Response) => {
   console.log("inside get topic routes");
     try {
       console.log("inside get topics");
@@ -77,5 +77,6 @@ routes.get('/topics', cors(),async (req: Request, res: Response) => {
     }
   });
 
-  export default routes;
+   
+   export default routes;
 

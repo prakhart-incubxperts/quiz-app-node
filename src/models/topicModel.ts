@@ -21,7 +21,7 @@ import sequelize from '../Connection/sequelizeConnection';
     declare status:string;
 }
 
-module.exports= Topics.init(
+module.exports=Topics.init(
     {
         TopicId:{
           primaryKey:true,

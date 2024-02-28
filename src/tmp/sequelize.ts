@@ -10,10 +10,10 @@ app.use(cors());
 
   async function test(){
 
-    // const sequelize = new Sequelize('testdb', 'root', 'root', {
-    //     host: 'localhost',
-    //     dialect:'mssql'
-    //   });
+    const sequelize = new Sequelize('testdb', 'root', 'root', {
+        host: 'localhost',
+        dialect:'mssql'
+      });
     try {
         await  sequelize.authenticate();
         
@@ -24,8 +24,8 @@ app.use(cors());
   }
 
   test();
-  option()
-  async function option(){
-    const user=await Topics.findAll();
-    console.log("user:",user);
-}
+//   option()
+//   async function option(){
+//     const user=await Topics.findAll();
+//     console.log("user:",user);
+// }

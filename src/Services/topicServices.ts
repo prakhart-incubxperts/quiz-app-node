@@ -3,7 +3,6 @@ const app = express();
 import { Op } from 'sequelize';
 const Topics = require('../models/topicModel');
 
-
 async function getTopicsService() {
     try {
         console.log("inside get topics serv");
@@ -77,5 +76,5 @@ async function saveTopicsService(data: any) {
         return response.status(400);
     }
 }
-
 export default { getTopicsService, saveTopicsService, getTopicExistsService, getTopicNameExistsService, editTopicService }
+

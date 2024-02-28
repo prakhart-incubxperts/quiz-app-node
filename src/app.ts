@@ -7,6 +7,8 @@ import questionRoutes from './Routes/questionRoutes'
 import userRoutes from './Routes/userRoutes';
 import optionRoutes from './Routes/optionRoutes';
 import testRoutes from './Routes/testRoutes';
+import loginRoutes from './Routes/loginRoutes';
+const jwt =require('jsonwebtoken');
 
 const app=express();
 const allowedOrigin=['http://13.232.154.99:8000/api','http://172.31.37.40:8000/api','*','null']
@@ -45,6 +47,7 @@ app.use("/api",questionRoutes);
 app.use("/api",userRoutes);
 app.use("/api",optionRoutes);
 app.use("/api",testRoutes);
+app.use("/api",loginRoutes);
 app.use('/',(req,res)=>{
   res.send("node server api is hitting")
 });
