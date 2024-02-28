@@ -63,6 +63,17 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
   routes.post('/users/account',verifyToken,cors(), async (req: Request, res: Response) => {
     try {
       console.log("req.body:",req?.body);
+      jwt.verify(req?.body,secretKey,(err:any,authData:any)=>{
+        if(err){
+          res.send({result:"invalid token"})
+        }
+        else{
+          res.json({
+            message:"profile accessed",
+            authData
+          })
+        }
+      })
       // const users = await UserController.getUserController(req?.body);
       // res.send(users);
     } catch (error) {
@@ -71,10 +82,13 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
     }
   });
 
-  function verifyToken(req:Request,res:Response,next:NextFunction){
-    const bearerHeader=req.headers['Authorization'];
+  function verifyToken(req:Request,res:Response,next:any){
+    const bearerHeader=req.headers['authorization'];
     if(typeof bearerHeader!== 'undefined'){
-      
+      const bearer=bearerHeader.split(" ");
+      const token=bearer[1];
+      req.body=token
+      next();
     }
     else{
       res.send({result:'Token is invalid'})
