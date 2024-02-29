@@ -46,8 +46,8 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
 
   routes.post('/users/login',cors(), async (req: Request, res: Response) => {
     try {
-      console.log("req.body:",req?.body);
-      const users = await UserController.getUserController(req?.body);
+      console.log("req.body:",req?.body.data);
+      const users = await UserController.getUserController(req?.body.data);
       jwt.sign((req?.query),secretKey,{expiresIn:'300s'},(err:Error,token:any)=>{
         res.json({
           token,users
