@@ -62,7 +62,7 @@ routes.get('/users',cors(), async (req: Request, res: Response) => {
 
   routes.post('/users/account',verifyToken,cors(), async (req: Request, res: Response) => {
     try {
-      console.log("req.body:",req?.body);
+      console.log("user a/c req.body:",req?.body);
       jwt.verify(req?.body,secretKey,(err:any,authData:any)=>{
         if(err){
           res.send({result:"invalid token"})
